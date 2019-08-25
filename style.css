@@ -1,0 +1,258 @@
+body
+{
+    font-family: RobotoSlab;
+    padding:0px;
+    margin:0px;
+    width:100%;
+    height:100%;
+    background-color: #151515;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.blur
+{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -4;
+	background-color: #000;
+	transition: opacity 0.2s ease-in-out;
+	opacity: 0;
+	top: 0px;
+	left: 0px;
+}
+
+.bg_wrap
+{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url(gears.jpg);
+  background-size: cover;
+  opacity: 0.2;
+  transition: opacity .3s ease-out;
+}
+
+.search_section, .result_form
+{
+  position: relative;
+  top: 350px;
+}
+
+.result_form
+{
+  color:#fff;
+  text-align: center;
+  top: 50px;
+  line-height: 25px;
+
+}
+
+.search_form
+{
+  position: relative;
+  margin-top: 43px;
+}
+
+.field_box
+{
+  position:relative;
+  display: block;
+  text-align: center;
+}
+
+.textbox
+{
+    display: inline-block;
+    width: 550px;
+    height: 40px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    font-size: 14px;
+    text-indent: 30px;
+}
+
+.search_now
+{
+    display: inline-block;
+    height: 38px;
+    width: 99px;
+    background-color: #000000;
+    color: #ccc;
+    font-size: 9px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    position: absolute;
+    margin-left: -100px;
+    top: 1px;
+}
+
+.search_again
+{
+  background-color: #10bc83;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  border-radius: 2px;
+  padding: 0px 40px;
+  overflow: hidden;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 20px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.search_again:before
+{
+	content: "";
+	background-color: #000;
+	height: 40px;
+	width: 0px;
+	left: 50%;
+	top: 0px;
+	position: absolute;
+	display: inline-block;
+	transition: left .3s ease-in-out,width .3s ease-in-out;
+	float: left;
+	filter: opacity(.05);
+}
+
+.search_again:after
+{
+	content: "";
+	background-color: #000;
+	height: 40px;
+	width: 0px;
+	top: 0px;
+	right: 50%;
+	position: absolute;
+	display: inline-block;
+    transition: right .3s ease-in-out,width .3s ease-in-out;
+	float: left;
+	filter: opacity(.05);
+}
+
+.search_again:hover:after
+{
+	width: 50%;
+	right: -50%;
+	filter: opacity(.1);
+}
+
+.search_again:hover:before
+{
+	width: 50%;
+	left: -50%;
+	filter: opacity(.1);
+}
+
+
+.head
+{
+  text-align: center;
+  color: lightgrey;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+#error_space{
+	position:absolute;
+    width: fit-content;
+    width: -moz-fit-content;
+	left:0px;
+	right:0px;
+	margin:auto;
+	display:inline-block;
+	padding:10px 20px 10px 10px;
+	background: rgba(0,0,0,0.80);
+	border-radius:37px;
+	color:white;
+	top:-100px;
+    transition: all .3s ease-in-out;
+}
+.show_error{
+	top:60px !important;
+}
+.top_msg
+{
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 32px;
+    float: left;
+    margin: 0px 10px;
+}
+.cross_mark
+{
+    background: #DA6161;
+    width: 32px;
+    height: 32px;
+    float: left;
+    padding: 2px 6px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: inline-block;
+}
+.cross_mark_error:after,.cross_mark_error:before
+{
+    content: "";
+    width: 20px;
+    position: relative;
+    height: 3px;
+    display: inline-block;
+    background: white;
+    border-radius: 1px;
+}
+.cross_mark_error:after
+{
+	transform: rotate(45deg);
+    top: 9px;
+}
+.cross_mark_error:before
+{
+    transform: rotate(135deg);
+    top: 12px;
+}
+.cross_mark_success:after
+{
+    content: "";
+    width: 15px;
+    height: 5px;
+    display: inline-block;
+    transform: rotate(-45deg);
+    position: relative;
+    border-radius: 3px;
+    border: 3px solid white;
+    border-top: transparent;
+    border-right: transparent;
+    top: 8px;
+    left: 0px;
+}
+
+
+.hide
+{
+  display: none;
+}

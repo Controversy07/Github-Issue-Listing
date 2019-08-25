@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Issues from GitHub </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="src.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="bg_wrap"></div>
+    <div class="blur"></div>
+
+    <div id="error_space">
+			<div class="top_div">
+				<span class="cross_mark cross_mark_error">
+				<span class="crossline1"></span>
+				<span class="crossline2"></span>
+				</span>
+				<span class="top_msg"></span>
+			</div>
+		</div>
+
+    <div class="search_section">
+
+      <div class="head">Github Issue Listings</div>
+
+      <div class="search_form">
+        <form class="field_box" onsubmit="return false;">
+						<input id="repo_url" tabindex="0"class="textbox" placeholder="https://github.com/<username>/<repositoryname>/" type="text" value="">
+            <button class="search_now" type="submit" id="search_now" onclick="search_repo(event)">Search</button>
+        </form>
+      </div>
+
+      <div class="result_form hide">
+
+          <div id="issue_total">Total Open Issues:<span><span></div>
+          <div id="issue_today">Number of open issues that were opened in the last 24 hours: <span><span></div>
+          <div id="issue_lastweek">Number of open issues that were opened more than 24 hours ago but less than 7 days ago: <span><span></div>
+          <div id="issue_rest">Number of open issues that were opened more than 7 days ago: <span><span></div>
+
+          <button class="search_again" type="submit" id="search_now" onclick="search_again()">Search New Repository</button>
+
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
