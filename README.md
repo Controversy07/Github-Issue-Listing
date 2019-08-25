@@ -12,3 +12,5 @@ Using apis makes this project less complex.
 - Making this project more scaleable by caching and storing previous results.
 
 - Link where this application is live:  https://infallible-babbage-428d49.netlify.com 
+
+- Making the webpage mobile optimized.
