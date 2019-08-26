@@ -32,8 +32,17 @@
 
       <div class="search_form">
         <form class="field_box" onsubmit="return false;">
-						<input id="repo_url" tabindex="0"class="textbox" placeholder="https://github.com/<username>/<repositoryname>/" type="text" value="">
-            <button class="search_now" type="submit" id="search_now" onclick="search_repo(event)">Search</button>
+
+            <input id="repo_url" autocomplete="off" tabindex="0" class="textbox" placeholder="https://github.com/<username>/<repositoryname>/" type="text" value="">
+            <button class="search_now" type="submit" id="search_now" onclick="search_repo()">Search</button>
+            <div class="checkbox_div">
+              <input id="pull_req_toggle" class="checkbox_check" type="checkbox">
+              <span class="checkbox">
+                <span class="checkbox_tick"></span>
+              </span>
+              <label for="pull_req_toggle" class="checkbox_label">Include pull requests with issues</label>
+            </div>
+
         </form>
       </div>
 
