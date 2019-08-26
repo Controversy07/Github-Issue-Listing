@@ -251,6 +251,83 @@ body
     left: 0px;
 }
 
+.checkbox_div
+{
+	display: block;
+	height: auto;
+	overflow: auto;
+	margin-top: 25px;
+	position:relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 250px;
+}
+
+.checkbox_check
+{
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	left: 0px;
+	margin:0px;
+	height:16px;
+	cursor: pointer;
+	width: 16px;
+}
+
+.checkbox
+{
+	float: left;
+	z-index: 0;
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	border: 2px solid #ccc;
+	border-radius: 2px;
+	position: relative;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.checkbox_check:hover ~ .checkbox
+{
+	border: 2px solid #10bc83;
+}
+
+.checkbox_check:focus ~ .checkbox
+{
+	border: 2px solid #10bc83;
+}
+
+.checkbox_tick
+{
+	display: block;
+	height: 3px;
+	width: 8px;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	transform: rotate(-45deg);
+	margin: 2px 1px;
+}
+
+.checkbox_check:checked ~ .checkbox
+{
+	background-color: #10bc83;
+	border-color: #10bc83;
+}
+
+
+.checkbox_label
+{
+	display: inline-block;
+	font-size: 16px;
+	margin: 0px 6px;
+	float: left;
+	cursor:pointer;
+  color: lightgrey;
+}
+
+
 
 .hide
 {
