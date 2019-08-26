@@ -12,6 +12,7 @@ function search_repo() //main function for all 3 server calls
     // check if the url is in proper format before making a server call
     showErrMsg("Invalid Url !!! Url should be in format as show in the textbox");
     $("#repo_url").val("");
+    blurHandler(0,0);
     return false;
   }
   var $url = "https://api.github.com/repos/"+split[3]+"/"+split[4];
@@ -84,7 +85,7 @@ function servercall(url,callback)// simple js ajax call
 function show_result()//display the result by hidingb and showing appropiate divs
 {
   blurHandler(0,0);
-  $("#issue_rest span").text($("#issue_total span").text() -  $("#issue_lastweek span").text());
+  $("#issue_rest span").text($("#issue_total span").text() -  ($("#issue_lastweek span").text() + $("#issue_today span").text())); //total - lastweek - today
   $(".search_form").hide();
   $(".search_section").animate({top: "150px"},function()
   {
@@ -109,7 +110,7 @@ function lastweek_issuecount(resp)
 {
   if(resp!=undefined)
   {
-    $("#issue_lastweek span").text(resp.length -  $("#issue_today span").text());
+    $("#issue_lastweek span").text(resp.length -  $("#issue_today span").text());// isuee from last week mius today
   }
   else
   {
