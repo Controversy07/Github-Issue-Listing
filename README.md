@@ -5,6 +5,9 @@ Using apis makes this project less complex.
 
 - Link where this application is live:  https://infallible-babbage-428d49.netlify.com 
 
+- NOTE: Every pull request is an issue, but not every issue is a pull request. For this reason, “shared” actions for both features, like manipulating assignees, labels and milestones, are provided within the Issues API. Thus an option for the user to choose whether to  include the open pull requests count along with issues has been provided.
+
+
 # Github-Issue-Listing Future Work
 
 - Using a third party plugin such as select2 or chosen, we can provide a search operation with autocomplete, where the user can select the repository name instead of providing the URL.
