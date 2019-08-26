@@ -85,7 +85,7 @@ function servercall(url,callback)// simple js ajax call
 function show_result()//display the result by hidingb and showing appropiate divs
 {
   blurHandler(0,0);
-  $("#issue_rest span").text($("#issue_total span").text() -  ($("#issue_lastweek span").text() + $("#issue_today span").text())); //total - lastweek - today
+  $("#issue_rest span").text($("#issue_total span").text() - $("#issue_lastweek span").text() - $("#issue_today span").text()); //total - lastweek - today
   $(".search_form").hide();
   $(".search_section").animate({top: "150px"},function()
   {
